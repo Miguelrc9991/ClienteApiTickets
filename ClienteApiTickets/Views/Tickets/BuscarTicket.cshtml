@@ -1,0 +1,32 @@
+﻿@model Ticket
+    <form method="post">
+        <label>Id Ticket:</label>
+        <input type="number" id="id" name="id" />
+        <button type="submit">buscar</button>
+    </form>
+@if (Model != null) { 
+<table class="table table-active">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Importe</th>
+            <th>Producto</th>
+            <th>FileName</th>
+
+           
+
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr>
+            <td>@Model.Fecha</td>
+            <td>@Model.Importe</td>
+            <td>@Model.Producto</td>
+            <td>@Model.Fileanme</td>
+           
+        </tr>
+        
+    </tbody>
+</table>
+}

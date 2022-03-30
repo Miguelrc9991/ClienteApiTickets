@@ -1,0 +1,26 @@
+﻿@model List<Ticket>
+<table class="table table-active">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Importe</th>
+            <th>Producto</th>
+            <th>FileName</th>
+           
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Ticket ticket in Model)
+            {
+        <tr>
+            <td>@ticket.Fecha.ToString()</td>
+            <td>@ticket.Importe</td>
+            <td>@ticket.Producto</td>
+            <td>@ticket.Fileanme</td>
+            <td><a class="btn btn-danger" asp-area="" asp-controller="" asp-action="">Process Ticket</a></td>
+        </tr>
+            }
+    </tbody>
+</table>
